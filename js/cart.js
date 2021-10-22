@@ -50,13 +50,13 @@ function mostrarCarrito(array) {
                             </figure>
                         </td>
                         <td> 
-                            <p class="precio"> ` + datoscarrito.unitCost + `</p>
+                            <p>$<span class="precio"> ` + datoscarrito.unitCost + `</span></p>
                         </td>
                         <td> 
                             <input type=number id="cant${i}" onchange="tiempoReal()" style="width: 45px" name="cantidades" min="1" value="` + datoscarrito.count + `">
                         </td>
                         <td> 
-                            <p id="subtProd${i}">` + totalProducto + `</p>
+                            <p>$<span id="subtProd${i}">` + totalProducto + `</span></p>
                         </td>
                         <td class="text-right d-none d-md-block"><a onclick="deleteRow(this)" class="btn btn-danger" data-abc="true"><i class="fa fa-trash"></i> Remover</a>
                         </td>
@@ -66,6 +66,7 @@ function mostrarCarrito(array) {
     
         document.getElementById("carrito").innerHTML = data;
         document.getElementById("precioSubTotal").innerHTML = subTotal;
+        
         
          
         

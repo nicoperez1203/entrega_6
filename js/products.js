@@ -86,24 +86,28 @@ function mostrarProductos(){
             
             /*Aqui accedemos a las distintas propiedades que queremos insertar en el html.*/
             listaProductos += `
+            <div class="col-6 col-sm-4">
             <a href="product-info.html" class="list-group-item list-group-item-action">
                 <div class="row">
-                    <div class="col-3">
-                        <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-                    </div>
                     <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ product.name +`</h4>
-                            <small class="text-muted">Se vendieron: ` + product.soldCount + ` autos de este tipo.</small>
-                        </div>
-                        <p class="mb-1">` + product.description + `</p>
+                        <img src="` + product.imgSrc + `" alt="` + product.name + `" class="img-thumbnail">
+                    </div>
+                    <div class="d-flex w-100 justify-content-center">
+                            <h6 class="mb-1">`+ product.name +`</h6>
+                            </div>
+                    <h8 class="small">` + product.description + `</h8>
+                    <div class="col">
+                        
                         <br>
-                        <p class="mb-1">El precio unitario es: U$S ` + product.cost + `</p>
+                        <p class="small">El precio unitario es: U$S ` + product.cost + `</p>
+                        <small class="text-muted">Se vendieron: ` + product.soldCount + ` autos de este tipo.</small>
                     </div>
                 </div>
             </a>
+            </div>
             `
         }
+        
     }
 
         document.getElementById("listaproductos").innerHTML = listaProductos; //Insertamos la lista en el div con id "listaproductos"

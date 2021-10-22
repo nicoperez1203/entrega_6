@@ -15,6 +15,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/myProfile.css" rel="stylesheet">
 
   <style>
     .bd-placeholder-img {
@@ -38,31 +39,181 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="home.html">Home</a> 
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="usuariolog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+ <!------------PRUEBA BARRA NAVEGACION--------------------->
+    
+<div class="row justify-content-center">
+  <div class="col-12">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Categorías</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sell.html">Vender</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="usuariolog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="cart.html">Mi carrito<i class="fas fa-shopping-cart"></i><span id="numeroProductos" class="badge badge-danger rounded-circle">2</span></a>
-            <a class="dropdown-item" href="my-profile.html">Mi perfil <i class="far fa-address-card"></i></a>
+          <a class="dropdown-item" href="my-profile.html">Mi perfil <i class="far fa-address-card"></i></a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="index.html" onclick="cerrarSesion()">Cerrar Sesion</a>
         </div>
+        </li>
+      </ul>
+    </div>
+    </nav>
+  </div>
+</div>
+
+<!------------------------------------------------------------>  
+
+  <br>
+
+<main>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Editar perfil
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="mb-2 text-primary">Datos Personales</h5>
       </div>
+      <div class="modal-body">
+        <div class="card h-100">
+            <div class="card-body">
+              <div class="row gutters">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="apellido" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="phone">Nº de Celular</label>
+                    <input type="number" min="0" class="form-control" id="phone" placeholder="Ingrese su numero de celular">
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label for="eMail">e-Mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+                  </div>
+                </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-8">
+                    <div class="form-group">
+                      <label for="edad">Edad</label>
+                      <input type="number" min="1" class="form-control" id="edad" placeholder="Ingrese su edad">
+                    </div>
+                  </div>
+              </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
       </div>
-  </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
     </div>
   </div>
+</div>
+
+  <!------------------------------------------------------------>
+    <!-- <div class="container">
+      <div class="row gutters">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="account-settings">
+              <div class="user-profile">
+                <div class="user-avatar">
+                  <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Foto de perfil">
+                </div>
+              <h5 class="user-name">Yuki Hayashi</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <h6 class="mb-2 text-primary">Datos Personales</h6>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="apellido" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6">
+              <div class="form-group">
+                <label for="phone">Nº de Celular</label>
+                <input type="number" min="0" class="form-control" id="phone" placeholder="Ingrese su numero de celular">
+              </div>
+            </div>
+              <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-5">
+                <div class="form-group">
+                  <label for="edad">Edad</label>
+                  <input type="number" min="1" class="form-control" id="edad" placeholder="Ingrese su edad">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="eMail">e-Mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+              </div>
+            </div>
+          </div>
+          <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="text-right">
+                <input type="submit" id="cancelar"  class="btn btn-secondary" value="Cancelar"></input>
+                <input type="submit" id="actualizar"  class="btn btn-primary" onclick="guardarDatos()" value="Actualizar"></input>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+  </div>
+  </div>
+  </div> -->
+  </main>
+  <br><br><br><br><br><br><br><br>
+
+  <!------------------------------------------------------------>
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
