@@ -85,10 +85,97 @@
 
 <main>
 
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Editar perfil
-</button>
+
+<!------------------------CARTA PERFIL------------------------------------>
+<div class="container emp-profile" id="contenido">
+  <form method="post">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="profile-img" id="foto">
+                  
+                  <div class="file btn btn-lg btn-primary">
+                      Cambiar foto de perfil
+                      <input type="file" name="file"/>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="profile-head">
+                          <h5 id="usuariolog2"></h5>
+                          <br>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#" role="tab" aria-controls="home" aria-selected="true">Datos Personales</a>
+                      </li>
+                     
+                  </ul>
+              </div>
+          </div>
+
+          <!-- Boton modal -->
+          <div class="col-md-2">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Editar perfil
+            </button>
+          </div>
+          <!-- Boton modal -->
+
+      </div>
+     
+          <div class="col-md-12">
+              <div class="tab-content profile-tab" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Nombre</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p id="nombre"></p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Apellido</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p id="apellido"></p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>e-mail</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p id="email"></p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Nº de Contacto</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p id="celular"></p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                    <label>Edad</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="edad"></p>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>           
+</div>
+<!--------------------------CARTA PERFIL---------------------------------->
+
+  
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -104,117 +191,47 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                    <input type="text" class="form-control" id="nombreNuevo" placeholder="Ingrese su nombre">
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="form-group">
                     <label for="apellido">Apellido</label>
-                    <input type="apellido" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+                    <input type="apellido" class="form-control" id="apellidoNuevo" placeholder="Ingrese su apellido">
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="form-group">
                     <label for="phone">Nº de Celular</label>
-                    <input type="number" min="0" class="form-control" id="phone" placeholder="Ingrese su numero de celular">
+                    <input type="number" min="0" class="form-control" id="celNuevo" placeholder="Ingrese su numero de celular">
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="form-group">
                     <label for="eMail">e-Mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+                    <input type="email" class="form-control" id="emailNuevo" placeholder="Ingrese su email">
                   </div>
                 </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-8">
                     <div class="form-group">
                       <label for="edad">Edad</label>
-                      <input type="number" min="1" class="form-control" id="edad" placeholder="Ingrese su edad">
+                      <input type="number" min="1" class="form-control" id="edadNuevo" placeholder="Ingrese su edad">
                     </div>
                   </div>
               </div>
       
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Guardar cambios</button>
+        <input type="submit" class="btn btn-primary" onclick="guardarDatos()" value="Guardar"></input>
       </div>
     </div>
   </div>
 </div>
-
-  <!------------------------------------------------------------>
-    <!-- <div class="container">
-      <div class="row gutters">
-        <div class="card h-100">
-          <div class="card-body">
-            <div class="account-settings">
-              <div class="user-profile">
-                <div class="user-avatar">
-                  <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Foto de perfil">
-                </div>
-              <h5 class="user-name">Yuki Hayashi</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-      <div class="card h-100">
-        <div class="card-body">
-          <div class="row gutters">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <h6 class="mb-2 text-primary">Datos Personales</h6>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="apellido" class="form-control" id="apellido" placeholder="Ingrese su apellido">
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6">
-              <div class="form-group">
-                <label for="phone">Nº de Celular</label>
-                <input type="number" min="0" class="form-control" id="phone" placeholder="Ingrese su numero de celular">
-              </div>
-            </div>
-              <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-5">
-                <div class="form-group">
-                  <label for="edad">Edad</label>
-                  <input type="number" min="1" class="form-control" id="edad" placeholder="Ingrese su edad">
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="form-group">
-                <label for="eMail">e-Mail</label>
-                <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
-              </div>
-            </div>
-          </div>
-          <div class="row gutters">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <div class="text-right">
-                <input type="submit" id="cancelar"  class="btn btn-secondary" value="Cancelar"></input>
-                <input type="submit" id="actualizar"  class="btn btn-primary" onclick="guardarDatos()" value="Actualizar"></input>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-      </div>
-  </div>
-  </div>
-  </div> -->
-  </main>
+</main>
   <br><br><br><br><br><br><br><br>
 
   <!------------------------------------------------------------>
-  <footer class="text-muted bg-light">
+  <footer>
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>

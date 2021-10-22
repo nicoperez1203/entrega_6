@@ -18,6 +18,6 @@ function onLoad() {
 
 
 function cerrarSesion(){
-    localStorage.clear();
+    storage.removeItem(user) //Cambié esto para que solo borre el item con la key de "user", en lugar de todo el local storage
     window.location = "index.html";
 }
