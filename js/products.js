@@ -99,8 +99,8 @@ function mostrarProductos(){
                     <div class="col">
                         
                         <br>
-                        <p class="small">El precio unitario es: U$S ` + product.cost + `</p>
-                        <small class="text-muted">Se vendieron: ` + product.soldCount + ` autos de este tipo.</small>
+                        <p class="small">El precio unitario es de: U$S ` + product.cost + `</p>
+                        <small class="text-muted">Se vendieron: ` + product.soldCount + ` autos de este modelo.</small>
                     </div>
                 </div>
             </a>
