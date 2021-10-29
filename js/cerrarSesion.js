@@ -7,6 +7,7 @@ function signOut() {
     auth2.signOut().then(function () {
         location.href = "index.html";
         sesionStorage.clear();
+        localStorage.removeItem('user');
         window.location = "index.html";
     });
 }
