@@ -1,5 +1,3 @@
-
-
 function mostrarNomb(){
     var nombre = document.getElementById("usuariolog");
     var nombre2 = document.getElementById("usuariolog2");

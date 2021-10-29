@@ -17,8 +17,6 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/my-Profile.css" rel="stylesheet">
   <script src="js/convertir.js"></script>
-  
-  <link rel="stylesheet" href="sweetalert2.min.css">  
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
 
   <style>
@@ -64,8 +62,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="home.html">Home <i class="fas fa-home"></i></a>
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home <i class="fas fa-home"></i></a> 
         </li>
         <li class="nav-item">
           <a class="nav-link" href="categories.html">Categorías <i class="fas fa-list-ul"></i></a>
@@ -99,15 +97,14 @@
 <div class="container rounded bg-white mt-5" id="formulario">
   <div class="row">
       <div class="col-md-4 border-right">
-          
-          <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="foto" src="" height="200" alt="Imagen perfil"><br><br><span id="usuariolog2" class="font-weight-bold"></span></div>
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="foto" src="" height="200" alt="Imagen perfil"><br><br><h4 id="usuariolog2" class="font-weight-bold"></h4 ></div>
           <input type="file" onchange="previewFile()" placeholder=""><br>
       </div>
       <div class="col-md-8">
           <div class="p-3 py-5">
               <div class="d-flex justify-content-between align-items-center mb-3">
                   <div class="d-flex flex-row align-items-center back"><i class="fa fa-long-arrow-left mr-1 mb-1"></i>
-                      <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Datos Personales <i class="fas fa-address-card"></i></h3> 
+                      <h3>Datos Personales <i class="fas fa-address-card"></i></h3> 
                   </div>
                   
               </div>
@@ -119,7 +116,7 @@
                   <label class="form-control-plaintext" style="font-weight: bolder; color:seagreen"> Edad: <input type="number" id="edad" min="1" style="font-weight:bold"></label><br>
               </div>
               
-              <div class="mt-5 text-right"><input type="submit" class="btn btn-primary profile-button" value="Guardar" id="guardar" onclick="guardar()"></button></div>
+              <div class="mt-5 text-right"><input type="submit" class="btn btn-primary profile-button" value="Guardar" id="guardar" onclick="guardar()"></input></div>
               
           </div>
       </div>
