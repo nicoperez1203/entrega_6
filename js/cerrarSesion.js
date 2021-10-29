@@ -5,12 +5,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-        localStorage.removeItem('user')
-        sesionStorage.clear();
         location.href = "index.html";
+        sesionStorage.clear();
         window.location = "index.html";
-        });
-        auth2.disconnect();
+    });
 }
 
 function onLoad() {
